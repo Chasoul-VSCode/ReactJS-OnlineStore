@@ -1,38 +1,155 @@
-.App {
+.AppBar {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.AppBar h1 {
+  margin: 0;
+  font-size: 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.AppBar nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.AppBar nav ul li {
+  margin-right: 20px;
+}
+
+.AppBar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.AppBar nav ul li a:hover {
+  color: #4CAF50;
+}
+
+.Body {
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.Photo img {
+  height: 400px;
+  width: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.Photo img:hover {
+  transform: scale(1.05);
+}
+
+.Produk {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 30px;
+  color: #333;
+}
+
+.Produk p {
+  font-size: 20px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.Beli button {
+  background-color: #4CAF50;
   color: white;
+  height: 50px;
+  width: 120px;
+  margin-top: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.Beli button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.Rating span {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.Rating span:first-child {
+  color: #FFD700;
+}
+
+.Reviews {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.Reviews h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.Review {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Review p {
+  margin: 5px 0;
+}
+
+.Review p:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Review strong {
+  font-size: 18px;
+  color: #333;
+}
+
+.Review span {
+  color: #FFD700;
+}
+.Price {
+  margin-top: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.Price span {
+  display: inline-block;
+  background-color: #f0f0f0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
